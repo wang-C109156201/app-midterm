@@ -1,31 +1,36 @@
 import React from "react";
-import { Box, HStack, VStack, AspectRatio, Text, Image, Pressable } from "native-base"
-
+import { Box, HStack, VStack, AspectRatio, Text, Image, Pressable, useColorMode } from "native-base"
 const AlbumDetail = ({ album, navigation }) => {
+  const { colorMode } = useColorMode();
   return (
     <Box 
-      marginX={1} marginBottom={2} borderRadius={3} shadow={2}
-      _dark={{ borderColor: 'blueGray.500', borderWidth: 0.6 }}
+      marginX={10} marginBottom={5} borderRadius={20}  shadow={2}
+      _dark={{ borderColor: '#2B3A61', borderWidth: 0.6 }}
+      _light={{ borderColor: '#FFE7AB', borderWidth: 0.6 }}
     >
       
-      <Box p={1} _dark={{ bg: "#2B3A61" }}
-        _light={{ bg: "white" }}>
+      <Box p={2} _dark={{ bg: "#FFE7AB" }}
+        _light={{ bg: "#2B3A61" }}
+        borderRadius={20}>
+          
         <Pressable 
           onPress={() => navigation.navigate('Detail', album)}
         >
           <HStack 
-            _dark={{ bg: "#2B3A61"}}
-            _light={{ bg: "white" }}>
-            <AspectRatio w="50" ratio={1}>
+            _dark={{ bg: "#FFE7AB"}}
+            _light={{ bg: "#2B3A61" }}
+            borderRadius={20}>
+            <AspectRatio w="70" ratio={1}>
               <Image
-                margin="1"
+                margin="0.5"
                 source={{ uri: album.thumbnail_image }}
+                borderRadius={10}
                 alt="artist"
               />
             </AspectRatio>
-            <VStack paddingLeft={2} justifyContent="space-around">
-              <Text>{album.title}</Text>
-              <Text>{album.artist}</Text>
+            <VStack paddingLeft={3} justifyContent="space-around">
+              <Text color={colorMode == "light" ? "white" : "#2B3A61"} fontSize="lg">{album.title}</Text>
+              <Text color={colorMode == "light" ? "white" : "#2B3A61"} fontSize="lg">{album.artist}</Text>
             </VStack>
           </HStack>
           

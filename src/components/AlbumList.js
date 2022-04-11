@@ -7,7 +7,7 @@ const AlbumList = ({ list, navigation }) => {
   return (
     <FlatList
     _dark={{ bg: "#2B3A61" }}
-    _light={{ bg: "white" }}
+    _light={{ bg: "#FFE7AB" }}
       data={list}
       renderItem={renderItem}
       keyExtractor={item => item.title}

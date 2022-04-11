@@ -1,14 +1,14 @@
 import React from 'react';
 import { Center, Text } from "native-base";
 
-const Uplode = () => {
+const Upload = () => {
     return (
     <Center bg="gray" flex={1}>
         <Text fontSize={30}>
-            uplode
+            Upload
         </Text>              
     </Center>
     );
 }
 
-export default Uplode;
+export default Upload;

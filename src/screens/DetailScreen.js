@@ -1,5 +1,5 @@
 import React from 'react';
-import { Linking } from 'react-native';
+import {StyleSheet, Linking } from 'react-native';
 import { Center, ScrollView, Box, AspectRatio, Text, Heading, Image, Button } from "native-base";
 
 
@@ -9,16 +9,18 @@ const DetailScreen = ({ route }) => {
     price,
     url,
     image,
-    description
+    description,
+    thumbnail_image
   } = route.params;
   return (
     <Center 
       flex={1} _dark={{ bg: "blueGray.900" }}
       _light={{ bg: "white" }}
     >
-      <ScrollView >
-        <AspectRatio w="100%" ratio={16 / 9}>
+      <ScrollView style={styles.bgcolorStyle}>
+        <AspectRatio style={styles.imageboxStyle}>
           <Image
+            style={styles.imageStyle}
             source={{uri: image }}
             alt='albumImage'
           />
@@ -53,6 +55,30 @@ const DetailScreen = ({ route }) => {
     </Center>
 
   );
+  
 }
+const styles = StyleSheet.create({
+  bgcolorStyle:{
+    backgroundColor:"#fff"
+  },  
+  imageStyle: {
+    height: 370,
+    width:270,
+    flexDirection:"row",
+    justifyContent:"center",
+    marginTop:8,
+    backgroundColor: '#fff',
+    borderRadius:15,
+  
+  },
+  imageboxStyle: {
+    flexDirection:"row",
+    justifyContent:"center",
+    alignItems: 'center',
+    marginTop:10,
+    backgroundColor: '#fff',
+  
+  }
+});
 
 export default DetailScreen;

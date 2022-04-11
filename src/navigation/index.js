@@ -10,12 +10,12 @@ import { extendTheme, useColorMode } from 'native-base';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 import AntDesign from 'react-native-vector-icons/AntDesign';
-
+import { Text, TouchableOpacity } from "react-native";
 
 import AlbumScreen from '../screens/AlbumScreen';
 import DetailScreen from '../screens/DetailScreen';
 import SettingsScreen from '../screens/SettingsScreen';
-import UploadScreen from '../screens/UplodeScreen';
+import UploadScreen from '../screens/UploadScreen';
 import PlanetScreen from '../screens/PlanetScreen';
 import SignupScreen from '../screens/SignupScreen';
 import ManualScreen from '../screens/ManualScreen';
@@ -231,7 +231,10 @@ const SettingsStack = ({navigation}) => {
 
 const HomeStack = ({navigation}) => {
   const { colorMode } = useColorMode();
-
+  const [toggle, setToggle] = useState(true);
+    const toggleFunction = () => {
+        setToggle(!toggle);
+    };
   return (
     <Stack.Navigator
     // screenOptions={{
@@ -250,12 +253,13 @@ const HomeStack = ({navigation}) => {
             <MaterialCommunityIcons 
               name={'menu'} 
               size={20} 
+              color= {colorMode == 'light' ? '#2B3A61' : '#FFE7AB'}
               onPress={() => navigation.openDrawer()}
               style={{marginRight: 20}}
             />            
           ),  
           headerTitleStyle: {
-            color: colorMode == 'light' ? '#2B3A61' : '#FFE7AB',
+            color: colorMode == 'light' ? '#FFE7AB' : '#2B3A61',
             fontWeight: '400',
             fontSize: 20
           },
@@ -271,7 +275,7 @@ const HomeStack = ({navigation}) => {
           },
           headerTintColor: colorMode == 'light' ? '#FFE7AB' : '#2B3A61',
           headerStyle: {
-            backgroundColor: colorMode == 'light' ? '#2B3A61' : '#FFE7AB',
+            backgroundColor: colorMode == 'light' ? '#FFE7AB' : '#2B3A61',
           },
           headerTitleStyle: {
             color: colorMode == 'light' ? '#FFE7AB' : '#2B3A61',
@@ -282,13 +286,20 @@ const HomeStack = ({navigation}) => {
             <Pressable>
                 <MaterialCommunityIcons 
                 name={'chevron-left'} 
-                color={'black'} 
+                color={colorMode == 'light' ? '#2B3A61' : '#FFE7AB'} 
                 size={30}
                 style={{marginRight: 20}}
                 onPress={ () => {navigation.goBack();}}
             />
             </Pressable>
             ),
+            headerRight:() =>(
+              <TouchableOpacity onPress={() => toggleFunction()}>
+                          <Text>{toggle ? <MaterialCommunityIcons name={'heart-outline'} color={colorMode == 'light' ? 'black' : '#FFE7AB'} size={25} />:
+                                          <MaterialCommunityIcons name={'heart'} color={'red'} size={25} />}
+                          </Text>
+                      </TouchableOpacity>
+            )
         })}
       />
     </Stack.Navigator>
