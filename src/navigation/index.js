@@ -73,7 +73,6 @@ const MyDrawer = () => {
         options={{
           headerShown: false,
           title: "登入",
-          
           drawerIcon: ({color}) => (
             <FontAwesome5 name="user-astronaut" color={color} size={20} />
           ),
