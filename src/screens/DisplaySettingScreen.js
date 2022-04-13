@@ -104,7 +104,7 @@ const DisplaySettingScreen = () => {
          </Center>
          <Image
             style={styles.imageStyle}
-            source={{uri: "https://raw.githubusercontent.com/wang-C109156201/app-midterm/master/src/images/settingb1.png" }}
+            source={  {uri: colorMode=="light" ? "https://raw.githubusercontent.com/wang-C109156201/app-midterm/master/src/images/settingb1.png" :"https://raw.githubusercontent.com/wang-C109156201/app-midterm/master/src/images/Rectangle%201.png" }}
             alt="Alternate Text"
           />
       </Box>

@@ -62,6 +62,11 @@ const Planet = ({ navigation }) => {
             style={styles.astronautimageStyle}
             alt="artist"
         />
+        <Image
+            source={{ uri: "https://raw.githubusercontent.com/wang-C109156201/app-midterm/master/src/images/Group%206.png" }}
+            style={styles.dotimageStyle}
+            alt="dot"
+        />
     </ScrollView>
     );
 }
@@ -107,6 +112,12 @@ const styles = StyleSheet.create({
         marginLeft:230,
         marginTop:-120,
      },
+    dotimageStyle: {
+        height: 90,
+        width:380,
+        marginLeft:50,
+        marginTop:-90,
+    }, 
     rowStyle: {
         flexDirection: "row",
         flexWrap: "wrap",
