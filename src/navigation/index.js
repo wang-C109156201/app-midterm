@@ -253,6 +253,7 @@ const HomeStack = ({navigation}) => {
           headerStyle: {
             backgroundColor: colorMode == 'light' ? '#FFE7AB' : '#2B3A61',
           },
+          
           headerLeft: () => (
             <MaterialCommunityIcons 
               name={'menu'} 

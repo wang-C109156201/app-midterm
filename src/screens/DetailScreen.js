@@ -21,7 +21,7 @@ const DetailScreen = ({ route }) => {
         <AspectRatio style={styles.imageboxStyle}>
           <Image
             style={styles.imageStyle}
-            source={{uri: image }}
+            source={{uri: thumbnail_image }}
             alt='albumImage'
           />
         </AspectRatio>

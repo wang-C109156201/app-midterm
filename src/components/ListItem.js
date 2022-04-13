@@ -24,6 +24,7 @@ const ListItem = ({ title, navigation, destination }) => {
         justifyContent="space-between"
       >
         <Text fontSize={16}>{title}</Text>
+        
         <AntDesign name="right" color={colorMode == "light" ? "#FFE7AB" : "#2B3A61"} size={16} />
       </HStack>
     </Pressable>

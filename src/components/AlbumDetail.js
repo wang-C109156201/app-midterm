@@ -3,12 +3,12 @@ import { Box, HStack, VStack, AspectRatio, Text, Image, Pressable, useColorMode 
 const AlbumDetail = ({ album, navigation }) => {
   const { colorMode } = useColorMode();
   return (
+    
     <Box 
       marginX={10} marginBottom={5} borderRadius={20}  shadow={2}
       _dark={{ borderColor: '#2B3A61', borderWidth: 0.6 }}
       _light={{ borderColor: '#FFE7AB', borderWidth: 0.6 }}
     >
-      
       <Box p={2} _dark={{ bg: "#FFE7AB" }}
         _light={{ bg: "#2B3A61" }}
         borderRadius={20}>
@@ -20,17 +20,18 @@ const AlbumDetail = ({ album, navigation }) => {
             _dark={{ bg: "#FFE7AB"}}
             _light={{ bg: "#2B3A61" }}
             borderRadius={20}>
-            <AspectRatio w="70" ratio={1}>
+            <AspectRatio w="60" ratio={1}>
               <Image
                 margin="0.5"
                 source={{ uri: album.thumbnail_image }}
                 borderRadius={10}
+                width="75"
                 alt="artist"
               />
             </AspectRatio>
-            <VStack paddingLeft={3} justifyContent="space-around">
+            <VStack paddingLeft={25} justifyContent="space-around">
               <Text color={colorMode == "light" ? "white" : "#2B3A61"} fontSize="lg">{album.title}</Text>
-              <Text color={colorMode == "light" ? "white" : "#2B3A61"} fontSize="lg">{album.artist}</Text>
+              <Text color={colorMode == "light" ? "white" : "#2B3A61"} fontSize="sm">{album.artist}</Text>
             </VStack>
           </HStack>
           
