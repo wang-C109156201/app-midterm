@@ -1,0 +1,63 @@
+{
+    "planetTitle": "planet",
+    "planetList": [
+       {
+          "title": "三招教你零基礎做筆記",
+          "artist": "讀書報社",
+          "url": "https://academy.snapask.com/zh-tw/post/%E6%89%93%E9%80%A0%E8%80%83%E8%A9%A6%E8%A4%87%E7%BF%92%E5%A5%BD%E5%B9%AB%E6%89%8B%E3%80%80%E4%B8%89%E6%8B%9B%E6%95%99%E4%BD%A0%E9%9B%B6%E5%9F%BA%E7%A4%8E%E5%81%9A%E5%B0%88%E5%B1%AC%E7%AD%86%E8%A8%98-5277361f4eca",
+          "image": "https://raw.githubusercontent.com/wang-C109156201/app-midterm/master/src/images/KohzGNg.jpg",
+          "thumbnail_image": "https://raw.githubusercontent.com/wang-C109156201/app-midterm/master/src/images/Rectangle%206.png",
+          "price": 7.99,
+          "description": "在讀書過程中,常有家長、學校老師要求學生準備屬於自己的小筆記,讓學生能在考前快速複習。但是筆記該包含哪些內容、該用什麼格式整理、甚至該選哪一種筆記本呢？如果你也有這些困擾,請不要擔心,Snapask接下來將要一步步帶同學從零開始打造你的專屬筆記啦,讓我們繼續看下去吧。 ",
+          "descriptiontwo":"筆記本怎麼選,常是開始準備製作筆記的同學們第一個難題。對於初學者,Snapask推薦方格筆記本。與一般筆記本不同,方格筆記本的內頁不是空白或條文,而是由細橫線、直線交織而成的小方格,在大型文具店都有販售,同學們可以選擇自己喜歡的款式。使用方格筆記本會更方便同學分配筆記空間、設計表格、列時間軸,增加筆記的易讀性。如果同學們擔心筆記本頁數不夠,或者希望之後可以隨時補充內容,建議同學們可以選擇活頁筆記本,可以自行增加頁數,就可以將高一高二的筆記都收藏在同一本筆記中喔！",
+          "descriptionthree":"好的學習筆記通常會分為四大結構：標題、課程記錄、重點摘要、困惑與補充。標題顧名思義就是當天上課的單元名稱，課程記錄則是指老師上課的板書內容或者上課提到的重點，這些都是上課當下必須撰寫的部分。"
+ 
+       },
+       {
+          "title": "這五招!提升讀書效率",
+          "artist": "note報報",
+          "url": "https://academy.snapask.com/zh-hk/post/%E9%80%99%E4%BA%94%E6%8B%9B%EF%BC%8C%E6%8F%90%E9%AB%98%E4%BD%A0%E7%9A%84%E8%AE%80%E6%9B%B8%E6%95%88%E7%8E%87%EF%BC%81-bbdf4ffdf300",
+          "image": "https://raw.githubusercontent.com/wang-C109156201/app-midterm/master/src/images/%E8%AE%80%E6%9B%B8%E6%95%88%E7%8E%87-02-2021-08-05.png",
+          "thumbnail_image": "https://raw.githubusercontent.com/wang-C109156201/app-midterm/master/src/images/Rectangle%207.png",
+          "price": 10.66,
+          "description": "上課的目的就是要把你不懂的觀念先聽懂,有些學生可能會很急著把老師說過的話都寫下來,但這樣做反而常常會跟不上老師教學腳步。上課先專心聽講,聽懂、消化過後，再用自己的話把重點寫下來。如果來不及作筆記，也可以先用手機把老師的授課內容拍下來，下課後再處理筆記的部分。",
+          "descriptiontwo": "1.整理書桌，把不必要的雜物都清掉。\n2.放音樂，輕音樂或白噪音都很適合讀書的時候聽。\n3.找到你最能專心讀書的地點，例：圖書館或者咖啡廳角落。\n",
+          "descriptionthree":"在你覺得很累或者缺乏動力的時候,強迫自己做當下不想做的事,只會事倍功半,沒有效率。這時候不妨做些讓自己放鬆的事,像是追劇、看小說、吃東西等等,什麼事情都不用想,也不需要擔心進度會落後,等到你充飽電後,做起事來一定更有效率！我自己是每天會在睡前留一小時的娛樂時間,這時候我會看netflix或跟朋友聊天,適當的休息,能讓一整天的壓力都消散,隔天依舊充滿鬥志,也不容易感到倦怠！"
+       },
+       {
+          "title": "勵志繪本分享-追夢的影子",
+          "artist": "天下雜誌",
+          "url": "https://artouch.com/kids/content-210114-2.html",
+          "image": "https://raw.githubusercontent.com/wang-C109156201/app-midterm/master/src/images/getImage-2.jpg",
+          "thumbnail_image": "https://raw.githubusercontent.com/wang-C109156201/app-midterm/master/src/images/Rectangle%202.png",
+          "price": 11.45,
+          "description": "2010 release, the third album from the Country/Pop superstar. Speak Now is the follow-up to her multi-million-selling 2008 album, Fearless. The 21-year-old singer/songwriter wrote the entire album on her own and co-produced with longtime collaborator Nathan Chapman, who worked with her on Fearless and her 2006 self-titled debut. Features the single 'Mine'."
+       },
+       {
+          "title": "什麼都無法阻擋追夢的腳步",
+          "artist": "夢想誌",
+          "url": "https://kknews.cc/news/2xxl8be.html",
+          "image": "https://raw.githubusercontent.com/wang-C109156201/app-midterm/master/src/images/6488817647640f8219ca.jpg",
+          "thumbnail_image": "https://raw.githubusercontent.com/wang-C109156201/app-midterm/master/src/images/Rectangle%203.png",
+          "price": 12.49,
+          "description": "2010 release, the third album from the Country/Pop superstar. Speak Now is the follow-up to her multi-million-selling 2008 album, Fearless. The 21-year-old singer/songwriter wrote the entire album on her own and co-produced with longtime collaborator Nathan Chapman, who worked with her on Fearless and her 2006 self-titled debut. Features the single 'Mine'."
+       },
+       {
+          "title": "不藏私!高中十科讀書方法大全",
+          "artist": "讀計日報",
+          "url": "https://academy.snapask.com/zh-tw/post/%E4%B8%8D%E8%97%8F%E7%A7%81%EF%BC%81%E9%AB%98%E4%B8%AD%E5%8D%81%E7%A7%91%E8%AE%80%E6%9B%B8%E6%96%B9%E6%B3%95%E5%A4%A7%E5%85%A8-8821f39ef91b",
+          "image": "https://raw.githubusercontent.com/wang-C109156201/app-midterm/master/src/images/Vivi%E5%90%84%E7%A7%91%E8%AE%80%E6%9B%B8%E7%AD%96%E7%95%A5_%E5%90%84%E7%A7%91%E8%AE%80%E6%9B%B8%E7%AD%96%E7%95%A5-2021-07-29.png",
+          "thumbnail_image": "https://raw.githubusercontent.com/wang-C109156201/app-midterm/master/src/images/Rectangle%208.png",
+          "price": 11.49,
+          "description": "Physical Album with 13 Songs"
+       },
+       {
+          "title": "筆記做起來!有效技巧公開!",
+          "artist": "讀書日報",
+          "url": "https://www.han-lin.tw/how-to-study/",
+          "image": "https://raw.githubusercontent.com/wang-C109156201/app-midterm/master/src/images/how-to-study.jpg",
+          "thumbnail_image": "https://raw.githubusercontent.com/wang-C109156201/app-midterm/master/src/images/Rectangle%2025.png",
+          "price": 11.49,
+          "description": "Physical Album with 13 Songs"
+       }
+ ]}
