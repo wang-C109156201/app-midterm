@@ -238,6 +238,43 @@ const SettingsStack = ({navigation}) => {
   );
 }
 
+const PlanetStack = ({navigation}) => {
+  const { colorMode } = useColorMode();
+
+  return (
+    <Stack.Navigator>
+      <Stack.Screen
+        name="DisplayPlanet"
+        component={PlanetScreen}
+        options={{
+          title: "Planet",
+          headerStyle: {
+            backgroundColor: colorMode == 'light' ? '#FFE7AB' : '#2B3A61',
+          },
+          headerTintColor: colorMode == 'light' ? '#2B3A61' : '#FFE7AB',
+          
+          headerTitleStyle: {
+            color: colorMode == 'light' ? '#FFE7AB' : '#2B3A61',
+            fontWeight: '400',
+            fontSize: 20
+          },
+          headerLeft: () => (
+            <MaterialCommunityIcons 
+              name={'menu'} 
+              size={30} 
+              color= {colorMode == 'light' ? '#2B3A61' : '#FFE7AB'}
+              onPress={() => navigation.openDrawer()}
+              style={{marginRight: 20}}
+            />            
+          ),  
+        }}
+      />
+      
+    </Stack.Navigator>
+    
+  );
+}
+
 const HomeStack = ({navigation}) => {
   const { colorMode } = useColorMode();
   const [toggle, setToggle] = useState(true);

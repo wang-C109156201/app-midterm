@@ -9,11 +9,16 @@ const Planet = ({ navigation }) => {
          _dark={{ bg: "#2B3A61" }}
          _light={{ bg: "#FFE7AB" }}>
          <Text style={styles.textStyle} bold  color={colorMode == "light" ? "#2B3A61" : "#FFE7AB"}>進入星球</Text> 
+         <Image
+                source={{ uri: "https://raw.githubusercontent.com/wang-C109156201/app-midterm/master/src/images/Group%205.png" }}
+                style={styles.bgimageStyle}
+                alt="bgimg"
+            />
         <Center 
             flex={1} _dark={{ bg: "#2B3A61" }}
             _light={{ bg: "#FFE7AB" }}
         >
-        
+       
         <Box style={styles.rowStyle}  >
             <Image
                 source={{ uri: "https://raw.githubusercontent.com/wang-C109156201/app-midterm/master/src/images/%E5%9C%8B%E6%96%87.png" }}
@@ -70,30 +75,31 @@ const styles = StyleSheet.create({
        fontWeight:"700",
     },
     bgimageStyle: {
-        backgroundColor:"black",
-        height: 140,
-        width:160,
+        height: 80,
+        width:200,
+        marginLeft:230,
+        marginTop:-50,
      },
     imageleftStyle: {
        height: 140,
        width:160,
        borderRadius:15,
        marginLeft:0,
-       marginTop:30,
+       marginTop:20,
     },
     imageleftoneStyle: {
         height: 140,
         width:160,
         borderRadius:15,
         marginLeft:45,
-        marginTop:30,
+        marginTop:20,
      },
     imagerightStyle: {
         height: 140,
         width:150,
         borderRadius:15,
         marginLeft:20,
-        marginTop:35,
+        marginTop:20,
     },
     astronautimageStyle: {
         height: 300,
