@@ -10,7 +10,8 @@ const Planet = ({ navigation }) => {
          _light={{ bg: "#FFE7AB" }}>
          <Text style={styles.textStyle} bold  color={colorMode == "light" ? "#2B3A61" : "#FFE7AB"}>進入星球</Text> 
          <Image
-                source={{ uri: "https://raw.githubusercontent.com/wang-C109156201/app-midterm/master/src/images/Group%205.png" }}
+                source={  {uri: colorMode=="light" ? "https://raw.githubusercontent.com/wang-C109156201/app-midterm/master/src/images/Group%205.png" :"https://raw.githubusercontent.com/wang-C109156201/app-midterm/master/src/images/Group%205dark.png" }}
+
                 style={styles.bgimageStyle}
                 alt="bgimg"
             />
@@ -58,12 +59,13 @@ const Planet = ({ navigation }) => {
         </Box> 
     
         <Image
-            source={{ uri: "https://raw.githubusercontent.com/wang-C109156201/app-midterm/master/src/images/planet%20b%201.png" }}
+            source={  {uri: colorMode=="light" ? "https://raw.githubusercontent.com/wang-C109156201/app-midterm/master/src/images/planet%20b%201.png" :"https://raw.githubusercontent.com/wang-C109156201/app-midterm/master/src/images/planet%201.png" }}
             style={styles.astronautimageStyle}
             alt="artist"
         />
         <Image
-            source={{ uri: "https://raw.githubusercontent.com/wang-C109156201/app-midterm/master/src/images/Group%206.png" }}
+            source={  {uri: colorMode=="light" ? "https://raw.githubusercontent.com/wang-C109156201/app-midterm/master/src/images/Group%206.png" :"https://raw.githubusercontent.com/wang-C109156201/app-midterm/master/src/images/Group%206dark.png" }}
+
             style={styles.dotimageStyle}
             alt="dot"
         />

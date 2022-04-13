@@ -74,7 +74,8 @@ const CustomDrawerContent = (props) => {
           <Image 
                 h={290} w={260}
                 style={styles.imgStyle}
-                source={{uri: "https://i.imgur.com/NTgy0Dz.png"}}
+                source={  {uri: colorMode=="light" ? "https://i.imgur.com/NTgy0Dz.png" :"https://raw.githubusercontent.com/wang-C109156201/app-midterm/master/src/images/b%201.png" }}
+
                 alt='avatar'
             />
       </DrawerContentScrollView>
