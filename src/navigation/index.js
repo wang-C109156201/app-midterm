@@ -1,17 +1,15 @@
 import React,{useState} from 'react';
-import { Pressable } from "native-base";
+import { Pressable,extendTheme, useColorMode,StatusBar,HStack, Image, VStack,Center } from "native-base";
 import { NavigationContainer, useTheme } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createDrawerNavigator , DrawerContentScrollView, DrawerItemList,DrawerItem} from '@react-navigation/drawer';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
-import { StatusBar } from 'native-base';
-import { extendTheme, useColorMode } from 'native-base';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import { Text, TouchableOpacity, StyleSheet  } from "react-native";
-import { Divider, Image, VStack } from 'native-base';
+
 
 import AlbumScreen from '../screens/AlbumScreen';
 import DetailScreen from '../screens/DetailScreen';
@@ -67,7 +65,11 @@ const CustomDrawerContent = (props) => {
                 alt='avatar'
             />
             </VStack>
-            <Text color={colorMode == 'light' ? '#2B3A61' : '#FFE7AB'} style={styles.userStyle}> 某探險者</Text>
+            <Center>
+              <HStack style={styles.userStyle} alignItems="center" >
+                <Text  style={styles.userfontStyle} color={colorMode == "light" ? "#FFE7AB" : "#2B3A61"} >某探險者</Text>
+              </HStack>
+            </Center>
           <DrawerItemList {...props}/>
           <Image 
                 h={290} w={260}
@@ -81,6 +83,7 @@ const CustomDrawerContent = (props) => {
 
 const MyDrawer = () => {
   const { colorMode } = useColorMode();
+  const {color} = colorMode;
   return (
     <Drawer.Navigator initialRouteName="HomeStack"  
         useLegacyImplementation
@@ -88,6 +91,8 @@ const MyDrawer = () => {
           drawerStyle: {
             backgroundColor: colorMode == 'light' ? '#FFE7AB' : '#2B3A61',
           },
+          drawerActiveBackgroundColor:colorMode == 'light' ? 'rgba(142,174,255,0.2)' : 'rgba(255,231,171,0.2)',
+          drawerInactiveTintColor:colorMode == 'light' ? '#757272' : '#FFFFFF',
           drawerActiveTintColor:colorMode == 'light' ? '#2B3A61' : '#FFE7AB',
           drawerLabelStyle: { fontSize: 18, fontWeight: '300' },
         }}
@@ -152,7 +157,7 @@ const MyTabs = () => {
     <Tab.Navigator
       initialRouteName="HomeStack"
       screenOptions={{
-        tabBarInActiveTintColor: colorMode == 'light' ? '#FFFFFF' : '#2B3A61',
+        tabBarInactiveTintColor: colorMode == 'light' ? '#FFFFFF' : '#2B3A61',
         tabBarActiveTintColor: colorMode == 'light' ? '#FFE7AB' : '#2B3A61',
         tabBarStyle: { backgroundColor: colorMode == 'light' ? '#2B3A61' : '#FFE7AB' },
         // headerShown: false
@@ -163,7 +168,7 @@ const MyTabs = () => {
         component={HomeStack}
         options={{
           headerShown: false,
-          title: "Home",
+          title: "首頁",
           fontSize:"25",
           tabBarIcon: ({color}) => (
             <MaterialCommunityIcons name="home" color={color}  size={27} />
@@ -314,8 +319,11 @@ const styles = StyleSheet.create({
   userStyle: {
     marginTop:5,
     marginBottom:20,
+    // fontSize:20,
+    // textAlign: 'center',
+  },
+  userfontStyle: {
     fontSize:20,
-    textAlign: 'center',
   },
   loginStyle: {
     marginLeft:30,

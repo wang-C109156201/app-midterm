@@ -25,12 +25,12 @@ const DisplaySettingScreen = () => {
             <HStack space={180} alignItems="center" >
                <Text fontSize="2xl" color={colorMode == "light" ? "#FFE7AB" : "#2B3A61"}>{colorMode == "light" ? "學習提醒" : "學習提醒"}</Text>
                <Switch
-                  name="light Mode"
-                  isChecked={colorMode === "light"}
-                  colorScheme="white"
-                  onToggle={toggleColorMode}
-                  accessibilityLabel="display-mode"
-                  accessibilityHint="light or dark mode"
+                  // name="light Mode"
+                  // isChecked={colorMode === "light"}
+                  colorScheme="amber"
+                  // onToggle={toggleColorMode}
+                  // accessibilityLabel="display-mode"
+                  // accessibilityHint="light or dark mode"
                   size="lg"
                   
                />
@@ -48,12 +48,12 @@ const DisplaySettingScreen = () => {
             <HStack space={180} alignItems="center" >
                <Text fontSize="2xl" color={colorMode == "light" ? "#FFE7AB" : "#2B3A61"}>{colorMode == "light" ? "複習提醒" : "複習提醒"}</Text>
                <Switch
-                  name="light Mode"
-                  isChecked={colorMode === "light"}
+                  // name="light Mode"
+                  // isChecked={colorMode === "light"}
                   colorScheme="amber"
-                  onToggle={toggleColorMode}
-                  accessibilityLabel="display-mode"
-                  accessibilityHint="light or dark mode"
+                  // onToggle={toggleColorMode}
+                  // accessibilityLabel="display-mode"
+                  // accessibilityHint="light or dark mode"
                   size="lg"
                />
             </HStack>
@@ -70,12 +70,12 @@ const DisplaySettingScreen = () => {
             <HStack space={180} alignItems="center" >
                <Text fontSize="2xl" color={colorMode == "light" ? "#FFE7AB" : "#2B3A61"}>{colorMode == "light" ? "休息提醒" : "休息提醒"}</Text>
                <Switch
-                  name="light Mode"
-                  isChecked={colorMode === "light"}
+                  // name="light Mode"
+                  // isChecked={colorMode === "light"}
                   colorScheme="amber"
-                  onToggle={toggleColorMode}
-                  accessibilityLabel="display-mode"
-                  accessibilityHint="light or dark mode"
+                  // onToggle={toggleColorMode}
+                  // accessibilityLabel="display-mode"
+                  // accessibilityHint="light or dark mode"
                   size="lg"
                />
             </HStack>

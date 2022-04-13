@@ -23,7 +23,7 @@ const AlbumDetail = ({ album, navigation }) => {
             <AspectRatio w="60" ratio={1}>
               <Image
                 margin="0.5"
-                source={{ uri: album.thumbnail_image }}
+                source={{ uri: album.image }}
                 borderRadius={10}
                 width="75"
                 alt="artist"

@@ -5,7 +5,7 @@ const Planet = () => {
     return (
     <Center bg="gray" flex={1}>
         <Text fontSize={30}>
-            Planet
+            進入星球
         </Text>              
     </Center>
     );
