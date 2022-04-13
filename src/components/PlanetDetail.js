@@ -1,8 +1,8 @@
 import React from "react";
 import { Box, HStack, VStack, AspectRatio, Text, Image, Pressable, useColorMode } from "native-base"
-import planetData from "../json/planet.json";
+import planet from "../json/planet.json";
 
-const PlanetScreenDetail = ({ planet, navigation }) => {
+const PlanetDetail = ({ planet, navigation }) => {
   const { colorMode } = useColorMode();
   return (
     
@@ -16,7 +16,7 @@ const PlanetScreenDetail = ({ planet, navigation }) => {
         borderRadius={20}>
           
         <Pressable 
-          onPress={() => navigation.navigate('Detail', planet)}
+          onPress={() => navigation.navigate('Planet', planet)}
         >
           <HStack 
             _dark={{ bg: "#FFE7AB"}}
@@ -31,10 +31,6 @@ const PlanetScreenDetail = ({ planet, navigation }) => {
                 alt="artist"
               />
             </AspectRatio>
-            <VStack paddingLeft={25} justifyContent="space-around">
-              <Text color={colorMode == "light" ? "white" : "#2B3A61"} fontSize="lg">{planet.title}</Text>
-              <Text color={colorMode == "light" ? "white" : "#2B3A61"} fontSize="sm">{planet.artist}</Text>
-            </VStack>
           </HStack>
           
         </Pressable>
@@ -42,4 +38,4 @@ const PlanetScreenDetail = ({ planet, navigation }) => {
     </Box>
   )};
 
-export default PlanetScreenDetail;
+export default PlanetDetail;

@@ -1,5 +1,6 @@
 import React from "react";
 import { Box, HStack, VStack, AspectRatio, Text, Image, Pressable, useColorMode } from "native-base"
+
 const AlbumDetail = ({ album, navigation }) => {
   const { colorMode } = useColorMode();
   return (
