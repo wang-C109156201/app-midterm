@@ -1,58 +1,60 @@
 import React from 'react';
 import {StyleSheet, Linking } from 'react-native';
-import { Center, ScrollView, Box, AspectRatio, Text, Heading, Image, Button,Link } from "native-base";
-import PlanetList from "../components/PlanetList";
-import planetData from "../json/planet.json";
+import { Center, ScrollView, Box, AspectRatio, Text, Heading, Image, Button,Link, useColorMode } from "native-base";
 
 const Planet = ({ navigation }) => {
+    const { colorMode, toggleColorMode} = useColorMode();
     return (
-    <ScrollView bg="gray" flex={1}>
-        <Text fontSize={30}>
-            進入星球
-        </Text>  
-        <Box style={styles.rowStyle}  bg="amber.500">
+    <ScrollView bg="gray" flex={1}
+         _dark={{ bg: "#2B3A61" }}
+         _light={{ bg: "#FFE7AB" }}>
+         <Text style={styles.textStyle} bold  color={colorMode == "light" ? "#2B3A61" : "#FFE7AB"}>進入星球</Text> 
+        <Center 
+            flex={1} _dark={{ bg: "#2B3A61" }}
+            _light={{ bg: "#FFE7AB" }}
+        >
+        
+        <Box style={styles.rowStyle}  >
             <Image
                 source={{ uri: "https://raw.githubusercontent.com/wang-C109156201/app-midterm/master/src/images/%E5%9C%8B%E6%96%87.png" }}
-                style={styles.imageStyle}
+                style={styles.imageleftStyle}
                 alt="chinese"
             />
             
                 <Image
                     source={{ uri: "https://raw.githubusercontent.com/wang-C109156201/app-midterm/master/src/images/%E8%8B%B1%E6%96%87.png" }}
-                    style={styles.imageStyle}
+                    style={styles.imagerightStyle}
                     alt="english"
                 />
             
         </Box>
-        <Box style={styles.rowStyle} bg="amber.500">
+        <Box style={styles.rowStyle} >
             <Image
-                source={{ uri: "https://raw.githubusercontent.com/wang-C109156201/app-midterm/master/src/images/%E6%95%B8%E5%AD%B8.png" }}
-                style={styles.mathimageStyle}
+                source={{ uri: "https://raw.githubusercontent.com/wang-C109156201/app-midterm/master/src/images/math.png" }}
+                style={styles.imageleftStyle}
                 alt="math"
 
             />
            
                 <Image
                     source={{ uri: "https://raw.githubusercontent.com/wang-C109156201/app-midterm/master/src/images/%E8%87%AA%E7%84%B6.png" }}
-                    style={styles.imageStyle}
+                    style={styles.imagerightStyle}
                     alt="physical"
                 />
             
         </Box>
-        <Box  bg="amber.500">
+    </Center>    
+        <Box  >
             <Image
                 source={{ uri: "https://raw.githubusercontent.com/wang-C109156201/app-midterm/master/src/images/%E7%A4%BE%E6%9C%83.png" }}
-                style={styles.imageStyle}
+                style={styles.imageleftoneStyle}
                 alt="social"
             />
-        </Box>          
-        <PlanetList
-            list={planetData.planetList}
-            navigation={navigation}
-         />
+        </Box> 
+    
         <Image
             source={{ uri: "https://raw.githubusercontent.com/wang-C109156201/app-midterm/master/src/images/planet%20b%201.png" }}
-            style={styles.imageStyle}
+            style={styles.astronautimageStyle}
             alt="artist"
         />
     </ScrollView>
@@ -67,18 +69,38 @@ const styles = StyleSheet.create({
        lineHeight:40,
        fontWeight:"700",
     },
-    imageStyle: {
-       height: 150,
-       width:150,
+    bgimageStyle: {
+        backgroundColor:"black",
+        height: 140,
+        width:160,
+     },
+    imageleftStyle: {
+       height: 140,
+       width:160,
        borderRadius:15,
-       marginLeft:17,
+       marginLeft:0,
+       marginTop:30,
     },
-    mathimageStyle: {
-        height: 170,
-        width:170,
+    imageleftoneStyle: {
+        height: 140,
+        width:160,
         borderRadius:15,
-        marginLeft:17,
-    }, 
+        marginLeft:45,
+        marginTop:30,
+     },
+    imagerightStyle: {
+        height: 140,
+        width:150,
+        borderRadius:15,
+        marginLeft:20,
+        marginTop:35,
+    },
+    astronautimageStyle: {
+        height: 300,
+        width:200,
+        marginLeft:230,
+        marginTop:-120,
+     },
     rowStyle: {
         flexDirection: "row",
         flexWrap: "wrap",
