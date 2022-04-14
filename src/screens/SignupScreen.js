@@ -4,7 +4,7 @@ import { Center, Text } from "native-base";
 const Signup = () => {
     return (
     <Center bg="gray" flex={1}>
-        <Text fontSize={30}>
+        <Text fontSize={30}  >
             Signup
         </Text>              
     </Center>

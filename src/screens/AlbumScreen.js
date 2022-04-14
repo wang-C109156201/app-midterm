@@ -13,7 +13,7 @@ const AlbumScreen = ({ navigation }) => {
   
   return (
     <ScrollView backgroundColor={colorMode == "light" ? "#FFE7AB" : "#2B3A61"}>
-      <Text color={colorMode == "light" ? '#2B3A61' : 'white'}  style={styles.textStyle} >星文分享</Text>
+      <Text color={colorMode == "light" ? 'white' : 'white'}  style={styles.textStyle} >星文分享</Text>
       <VStack ml={8} mb={10}   space={14}>
             <Image 
                 h={200} w={370}
@@ -41,6 +41,7 @@ const styles = StyleSheet.create({
     marginLeft:30,
     lineHeight:40,
     fontWeight:"700",
+    color:"#DAA520"
   },
   imageStyle: {
     height: 200,

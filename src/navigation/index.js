@@ -66,8 +66,8 @@ const CustomDrawerContent = (props) => {
             />
             </VStack>
             <Center>
-              <HStack style={styles.userStyle} alignItems="center" >
-                <Text  style={styles.userfontStyle} color={colorMode == "light" ? "#FFE7AB" : "#2B3A61"} >某探險者</Text>
+              <HStack style={styles.userStyle} color={colorMode == 'light' ? '#FFE7AB' : '#2B3A61'} alignItems="center" >
+                <Text  style={styles.userfontStyle}  >某探險者</Text>
               </HStack>
             </Center>
           <DrawerItemList {...props}/>
@@ -181,7 +181,7 @@ const MyTabs = () => {
         component={PlanetScreen}
         options={{
           headerShown: false,
-          title: "Planet",
+          title: "星球",
           tabBarIcon: ({color}) => (
             <Ionicons name="planet-outline" color={color} size={27} />
           ),
@@ -192,7 +192,7 @@ const MyTabs = () => {
         component={UploadScreen}
         options={{
           headerShown: false,
-          title: "uplode",
+          title: "上傳",
           tabBarIcon: ({color}) => (
             <Ionicons name="cloud-upload-outline" color={color} size={27} />
           ),
@@ -362,6 +362,7 @@ const styles = StyleSheet.create({
   },
   userfontStyle: {
     fontSize:20,
+    color:"#DAA520",
   },
   loginStyle: {
     marginLeft:30,
