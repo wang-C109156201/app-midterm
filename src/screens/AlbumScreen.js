@@ -13,7 +13,7 @@ const AlbumScreen = ({ navigation }) => {
   
   return (
     <ScrollView backgroundColor={colorMode == "light" ? "#FFE7AB" : "#2B3A61"}>
-      <Text color={colorMode == "light" ? 'white' : 'white'}  style={styles.textStyle} >星文分享</Text>
+      <Text style={styles.textStyle} bold color={colorMode == "light" ? "#2B3A61" : "#FFE7AB"}   >星文分享</Text>
       <VStack ml={8} mb={10}   space={14}>
             <Image 
                 h={200} w={370}

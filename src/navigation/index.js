@@ -165,7 +165,7 @@ const MyTabs = () => {
       }}
     >
       <Tab.Screen
-        name="HomeStack"
+        name="Home"
         component={HomeStack}
         options={{
           headerShown: false,
