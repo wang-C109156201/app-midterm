@@ -137,7 +137,7 @@ const MyDrawer = () => {
       />
       <Drawer.Screen 
         name="ExploreManual" 
-        component={ManualScreen} 
+        component={ManualStack} 
         options={{
           headerShown: false,
           title: "探索說明書",
@@ -239,16 +239,16 @@ const SettingStack = ({navigation}) => {
   );
 }
 
-const PlanetStack = ({navigation}) => {
+const ManualStack = ({navigation}) => {
   const { colorMode } = useColorMode();
 
   return (
     <Stack.Navigator>
       <Stack.Screen
-        name="DisplayPlanet"
-        component={PlanetScreen}
+        name="DisplayManualScreen"
+        component={ManualScreen}
         options={{
-          title: "Planet",
+          title: "Manual",
           headerStyle: {
             backgroundColor: colorMode == 'light' ? '#FFE7AB' : '#2B3A61',
           },
