@@ -7,7 +7,7 @@ const Manual = () => {
         <Image 
             h={200} w={370}
             borderRadius={25}
-            source={{uri: "https://raw.githubusercontent.com/wang-C109156201/app-midterm/master/src/images/Rectangle%201.png"}}
+            source={{uri: "https://raw.githubusercontent.com/wang-C109156201/app-midterm/master/src/images/Group%2014.png"}}
             alt='manualtopimg'
         />
         <Text fontSize={30}color={"black"}>
