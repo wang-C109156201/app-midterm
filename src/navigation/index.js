@@ -13,7 +13,7 @@ import { Text, TouchableOpacity, StyleSheet  } from "react-native";
 
 import AlbumScreen from '../screens/AlbumScreen';
 import DetailScreen from '../screens/DetailScreen';
-import SettingsScreen from '../screens/SettingsScreen';
+import SettingScreen from '../screens/SettingScreen';
 import UploadScreen from '../screens/UploadScreen';
 import PlanetScreen from '../screens/PlanetScreen';
 import SignupScreen from '../screens/SignupScreen';
@@ -114,7 +114,7 @@ const MyDrawer = () => {
       />
       <Drawer.Screen 
         name="SettingsStack" 
-        component={SettingsStack} 
+        component={SettingStack} 
         options={{
           headerShown: false,
           title: "探索設定",
@@ -202,7 +202,7 @@ const MyTabs = () => {
   );
 }
 
-const SettingsStack = ({navigation}) => {
+const SettingStack = ({navigation}) => {
   const { colorMode } = useColorMode();
 
   return (

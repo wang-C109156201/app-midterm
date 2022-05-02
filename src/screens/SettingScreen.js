@@ -3,7 +3,7 @@ import { Box } from "native-base";
 import ListItem from "../components/ListItem";
 import { useColorMode } from 'native-base';
 
-const SettingsScreen = ({ navigation }) => {
+const SettingScreen = ({ navigation }) => {
     const { colorMode } = useColorMode();
     return (
         <Box 
@@ -23,4 +23,4 @@ const SettingsScreen = ({ navigation }) => {
     );
 };
 
-export default SettingsScreen;
+export default SettingScreen;
