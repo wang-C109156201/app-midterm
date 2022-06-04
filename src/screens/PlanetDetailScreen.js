@@ -15,7 +15,7 @@ const PlanetDetail = () => {
                <Box style={styles.rowStyle} >
                     <TouchableOpacity onPress={() => navigation. navigate ( 'PlanetDetail' )}>
                     <Image
-                        source={{ uri: "https://raw.githubusercontent.com/wang-C109156201/app-midterm/master/src/images/%E5%9C%8B%E6%96%87.png" }}
+                        source={{ uri: "https://raw.githubusercontent.com/wang-C109156201/app-midterm/master/src/images/3.png" }}
                         style={styles.imageleftStyle}
                         alt="chinese"
                     />
@@ -23,7 +23,7 @@ const PlanetDetail = () => {
                     </TouchableOpacity>
                     <TouchableOpacity onPress={() => navigation. navigate ( 'PlanetDetail' )}>
                     <Image
-                        source={{ uri: "https://raw.githubusercontent.com/wang-C109156201/app-midterm/master/src/images/%E5%9C%8B%E6%96%87.png" }}
+                        source={{ uri: "https://raw.githubusercontent.com/wang-C109156201/app-midterm/master/src/images/4.png" }}
                         style={styles.imagerightStyle}
                         alt="chinese"
                     />
@@ -33,7 +33,7 @@ const PlanetDetail = () => {
                 <Box style={styles.rowStyle} >
                     <TouchableOpacity onPress={() => navigation. navigate ( 'PlanetDetail' )}>
                     <Image
-                        source={{ uri: "https://raw.githubusercontent.com/wang-C109156201/app-midterm/master/src/images/%E5%9C%8B%E6%96%87.png" }}
+                        source={{ uri: "https://raw.githubusercontent.com/wang-C109156201/app-midterm/master/src/images/5.png" }}
                         style={styles.imageleftStyle}
                         alt="chinese"
                     />
