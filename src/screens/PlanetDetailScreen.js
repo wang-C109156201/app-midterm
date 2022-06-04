@@ -15,55 +15,55 @@ const PlanetDetail = () => {
                <Box style={styles.rowStyle} >
                     <TouchableOpacity onPress={() => navigation. navigate ( 'PlanetDetail' )}>
                     <Image
-                        source={{ uri: "https://raw.githubusercontent.com/wang-C109156201/app-midterm/master/src/images/3.png" }}
+                        source={{ uri: "https://raw.githubusercontent.com/wang-C109156201/app-midterm/master/src/images/Rectangle%2016.png" }}
                         style={styles.imageleftStyle}
-                        alt="chinese"
+                        alt="三民英文(二)L8單字"
                     />
-                    <Text>單字gggg</Text>
+                    <Text>三民英文(二)L8單字</Text>
                     </TouchableOpacity>
                     <TouchableOpacity onPress={() => navigation. navigate ( 'PlanetDetail' )}>
                     <Image
-                        source={{ uri: "https://raw.githubusercontent.com/wang-C109156201/app-midterm/master/src/images/4.png" }}
+                        source={{ uri: "https://raw.githubusercontent.com/wang-C109156201/app-midterm/master/src/images/Rectangle%204.png" }}
                         style={styles.imagerightStyle}
-                        alt="chinese"
+                        alt="三民英文(三)L5單字"
                     />
-                    <Text>單字gggg</Text>
+                    <Text>三民英文(二)L5單字</Text>
                     </TouchableOpacity>
                 </Box>
                 <Box style={styles.rowStyle} >
                     <TouchableOpacity onPress={() => navigation. navigate ( 'PlanetDetail' )}>
                     <Image
-                        source={{ uri: "https://raw.githubusercontent.com/wang-C109156201/app-midterm/master/src/images/5.png" }}
+                        source={{ uri: "https://raw.githubusercontent.com/wang-C109156201/app-midterm/master/src/images/Rectangle%203.png" }}
                         style={styles.imageleftStyle}
-                        alt="chinese"
+                        alt="三民英文(四)L2單字"
                     />
-                    <Text>單字gggg</Text>
+                    <Text>三民英文(四)L2單字</Text>
                     </TouchableOpacity>
                     <TouchableOpacity onPress={() => navigation. navigate ( 'PlanetDetail' )}>
                     <Image
-                        source={{ uri: "https://raw.githubusercontent.com/wang-C109156201/app-midterm/master/src/images/%E5%9C%8B%E6%96%87.png" }}
+                        source={{ uri: "https://raw.githubusercontent.com/wang-C109156201/app-midterm/master/src/images/Rectangle%205.png" }}
                         style={styles.imagerightStyle}
-                        alt="chinese"
+                        alt="三民英文(五)L7單字"
                     />
-                    <Text>單字gggg</Text>
+                    <Text>三民英文(五)L7單字</Text>
                     </TouchableOpacity>
                 </Box>
                 <Box style={styles.rowStyle} >
                     <TouchableOpacity onPress={() => navigation. navigate ( 'PlanetDetail' )}>
                     <Image
-                        source={{ uri: "https://raw.githubusercontent.com/wang-C109156201/app-midterm/master/src/images/%E5%9C%8B%E6%96%87.png" }}
+                        source={{ uri: "https://raw.githubusercontent.com/wang-C109156201/app-midterm/master/src/images/Rectangle%2015.png" }}
                         style={styles.imageleftStyle}
-                        alt="chinese"
+                        alt="三民英文(一)L7單字"
                     />
-                    <Text>單字gggg</Text>
+                    <Text>三民英文(一)L7單字</Text>
                     </TouchableOpacity>
                     <TouchableOpacity onPress={() => navigation. navigate ( 'PlanetDetail' )}>
                     <Image
-                        source={{ uri: "https://raw.githubusercontent.com/wang-C109156201/app-midterm/master/src/images/%E5%9C%8B%E6%96%87.png" }}
+                        source={{ uri: "https://raw.githubusercontent.com/wang-C109156201/app-midterm/master/src/images/Rectangle%2016.png" }}
                         style={styles.imagerightStyle}
-                        alt="chinese"
+                        alt="三民英文(二)L10單字"
                     />
-                    <Text>單字gggg</Text>
+                    <Text>三民英文(二)L10單字</Text>
                     </TouchableOpacity>
                 </Box>
             </Center>
