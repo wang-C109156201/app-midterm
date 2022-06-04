@@ -21,28 +21,28 @@ const Manual = () => {
             <Box>
                 <Image 
                    style={styles.imagetwoStyle}
-                    source={{uri: "https://raw.githubusercontent.com/wang-C109156201/app-midterm/master/src/images/Group%2015.png"}}
+                    source={{uri: colorMode=="light"?"https://raw.githubusercontent.com/wang-C109156201/app-midterm/master/src/images/Group%2015.png":"https://raw.githubusercontent.com/wang-C109156201/app-midterm/master/src/images/Group%2020dark.png"}}
                     alt='manualimg'
                 />   
             </Box>
             <Image 
                 style={styles.imagethreeStyle}
-                source={{uri: "https://raw.githubusercontent.com/wang-C109156201/app-midterm/master/src/images/Group%2016.png"}}
+                source={{uri:colorMode=="light"? "https://raw.githubusercontent.com/wang-C109156201/app-midterm/master/src/images/Group%2016.png":"https://raw.githubusercontent.com/wang-C109156201/app-midterm/master/src/images/Group%2016dark.png"}}
                 alt='manualimg'
             />          
             <Image 
                 style={styles.imagefourStyle}
-                source={{uri: "https://raw.githubusercontent.com/wang-C109156201/app-midterm/master/src/images/Group%2017.png"}}
+                source={{uri: colorMode=="light"?"https://raw.githubusercontent.com/wang-C109156201/app-midterm/master/src/images/Group%2017.png":"https://raw.githubusercontent.com/wang-C109156201/app-midterm/master/src/images/Group%2017dark.png"}}
                 alt='manualimg'
             />
             <Image 
                 style={styles.imagefiveStyle}
-                source={{uri: "https://raw.githubusercontent.com/wang-C109156201/app-midterm/master/src/images/Group%2018.png"}}
-                alt='manualimg'
+                source={{uri: colorMode=="light"?"https://raw.githubusercontent.com/wang-C109156201/app-midterm/master/src/images/Group%2018%20light.png":"https://raw.githubusercontent.com/wang-C109156201/app-midterm/master/src/images/Group%2018%20(1)dark.png"}}
+                alt='manualimg5'
             />
             <Image 
                 style={styles.imagesixStyle}
-                source={{uri: "https://raw.githubusercontent.com/wang-C109156201/app-midterm/master/src/images/Group%2019.png"}}
+                source={{uri: colorMode=="light"?"https://raw.githubusercontent.com/wang-C109156201/app-midterm/master/src/images/Group%2019.png":"https://raw.githubusercontent.com/wang-C109156201/app-midterm/master/src/images/Group%2019dark.png"}}
                 alt='manualimg'
             />
         </Center>
@@ -50,23 +50,15 @@ const Manual = () => {
     );
 }
 const styles = StyleSheet.create({ 
-    textStyle: {
-      marginTop:10,
-      marginBottom:10,
-      fontSize:27,
-      marginLeft:30,
-      lineHeight:40,
-      fontWeight:"700",
-      color:"#DAA520"
-    },
     imageoneStyle: {
       height: 190,
       width:370,
       justifyContent:"center",
       borderRadius:25,
+      marginTop:10,
     },
     imagetwoStyle: {
-        height: 380,
+        height: 400,
         width:370,
         justifyContent:"center",
         borderRadius:25,

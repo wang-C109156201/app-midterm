@@ -1,6 +1,8 @@
 import React from 'react';
-import {StyleSheet, Linking } from 'react-native';
+import {StyleSheet, Linking,TouchableOpacity } from 'react-native';
 import { Center, ScrollView, Box, AspectRatio, Text, Heading, Image, Button,Link, useColorMode } from "native-base";
+import { NavigationContainer } from '@react-navigation/native' ;
+import { createStackNavigator } from '@react-navigation/stack' ;
 
 const Planet = ({ navigation }) => {
     const { colorMode, toggleColorMode} = useColorMode();
@@ -21,11 +23,13 @@ const Planet = ({ navigation }) => {
         >
        
         <Box style={styles.rowStyle}  >
-            <Image
-                source={{ uri: "https://raw.githubusercontent.com/wang-C109156201/app-midterm/master/src/images/%E5%9C%8B%E6%96%87.png" }}
-                style={styles.imageleftStyle}
-                alt="chinese"
-            />
+            <TouchableOpacity onPress={() => navigation. navigate ( 'PlanetDetail' )}>
+                <Image
+                    source={{ uri: "https://raw.githubusercontent.com/wang-C109156201/app-midterm/master/src/images/%E5%9C%8B%E6%96%87.png" }}
+                    style={styles.imageleftStyle}
+                    alt="chinese"
+                />
+            </TouchableOpacity>
             
                 <Image
                     source={{ uri: "https://raw.githubusercontent.com/wang-C109156201/app-midterm/master/src/images/%E8%8B%B1%E6%96%87.png" }}

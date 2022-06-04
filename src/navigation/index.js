@@ -19,6 +19,7 @@ import PlanetScreen from '../screens/PlanetScreen';
 import SignupScreen from '../screens/SignupScreen';
 import ManualScreen from '../screens/ManualScreen';
 import ReviewScreen from '../screens/ReviewScreen';
+import PlanetDetailScreen from '../screens/PlanetDetailScreen';
 import DisplaySettingScreen from '../screens/DisplaySettingScreen';
 import MyTheme from '../Theme';
 
@@ -178,7 +179,7 @@ const MyTabs = () => {
       />
       <Tab.Screen
         name="planet-outline"
-        component={PlanetScreen}
+        component={PlanetStack}
         options={{
           headerShown: false,
           title: "星球",
@@ -239,6 +240,7 @@ const SettingStack = ({navigation}) => {
   );
 }
 
+
 const ManualStack = ({navigation}) => {
   const { colorMode } = useColorMode();
 
@@ -273,6 +275,74 @@ const ManualStack = ({navigation}) => {
       
     </Stack.Navigator>
     
+  );
+}
+
+const PlanetStack = ({navigation}) => {
+  const { colorMode } = useColorMode();
+  // const [toggle, setToggle] = useState(true);
+  //   const toggleFunction = () => {
+  //       setToggle(!toggle);
+  //   };
+  return (
+    <Stack.Navigator
+    >
+      <Stack.Screen
+        name="Planet"
+        component={PlanetScreen}
+        options={{
+          title: "Planet",
+          headerStyle: {
+            backgroundColor: colorMode == 'light' ? '#FFE7AB' : '#2B3A61',
+          },
+          
+          headerLeft: () => (
+            <MaterialCommunityIcons 
+              name={'menu'} 
+              size={30} 
+              color= {colorMode == 'light' ? '#2B3A61' : '#FFE7AB'}
+              onPress={() => navigation.openDrawer()}
+              style={{marginRight: 20}}
+            />            
+          ),  
+          headerTitleStyle: {
+            color: colorMode == 'light' ? '#FFE7AB' : '#2B3A61',
+            fontWeight: '400',
+            fontSize: 20
+          },
+        }}
+      />
+      <Stack.Screen
+        name="PlanetDetail"
+        component={PlanetDetailScreen}
+        options={() => ({
+          title: "PlanetDetail",
+          headerStyle: {
+            backgroundColor: '#fff',
+          },
+          headerTintColor: colorMode == 'light' ? '#FFE7AB' : '#2B3A61',
+          headerStyle: {
+            backgroundColor: colorMode == 'light' ? '#FFE7AB' : '#2B3A61',
+          },
+          headerTitleStyle: {
+            color: colorMode == 'light' ? '#FFE7AB' : '#2B3A61',
+            fontWeight: '400',
+            fontSize: 20
+          },
+          headerLeft: () => (
+            <Pressable>
+                <MaterialCommunityIcons 
+                name={'chevron-left'} 
+                color={colorMode == 'light' ? '#2B3A61' : '#FFE7AB'} 
+                size={30}
+                style={{marginRight: 20}}
+                onPress={ () => {navigation.navigate('Planet');}}
+            />
+            </Pressable>
+            )
+        })}
+      />
+    </Stack.Navigator>
   );
 }
 
