@@ -20,6 +20,7 @@ import SignupScreen from '../screens/SignupScreen';
 import ManualScreen from '../screens/ManualScreen';
 import ReviewScreen from '../screens/ReviewScreen';
 import PlanetDetailScreen from '../screens/PlanetDetailScreen';
+import PlanetImgScreen from '../screens/PlanetImgScreen';
 import DisplaySettingScreen from '../screens/DisplaySettingScreen';
 import MyTheme from '../Theme';
 
@@ -280,10 +281,10 @@ const ManualStack = ({navigation}) => {
 
 const PlanetStack = ({navigation}) => {
   const { colorMode } = useColorMode();
-  // const [toggle, setToggle] = useState(true);
-  //   const toggleFunction = () => {
-  //       setToggle(!toggle);
-  //   };
+  const [toggle, setToggle] = useState(true);
+    const toggleFunction = () => {
+        setToggle(!toggle);
+    };
   return (
     <Stack.Navigator
     >
@@ -330,16 +331,65 @@ const PlanetStack = ({navigation}) => {
             fontSize: 20
           },
           headerLeft: () => (
+            <MaterialCommunityIcons 
+              name={'menu'} 
+              size={30} 
+              color= {colorMode == 'light' ? '#2B3A61' : '#FFE7AB'}
+              onPress={() => navigation.openDrawer()}
+              style={{marginRight: 20}}
+            />            
+          ),
+          headerRight: () => (
+            <Ionicons 
+              name={'search'} 
+              size={30} 
+              color= {colorMode == 'light' ? '#2B3A61' : '#FFE7AB'}
+              onPress={() => {alert("you clicked me")}}
+              style={{marginRight: 20}}
+            />            
+          ),  
+          headerTitleStyle: {
+            color: colorMode == 'light' ? '#FFE7AB' : '#2B3A61',
+            fontWeight: '400',
+            fontSize: 20
+          },
+        })}
+      />
+      <Stack.Screen
+        name="PlanetImg"
+        component={PlanetImgScreen}
+        options={() => ({
+          title: "PlanetImg",
+          headerStyle: {
+            backgroundColor: '#fff',
+          },
+          headerTintColor: colorMode == 'light' ? '#FFE7AB' : '#2B3A61',
+          headerStyle: {
+            backgroundColor: colorMode == 'light' ? '#FFE7AB' : '#2B3A61',
+          },
+          headerTitleStyle: {
+            color: colorMode == 'light' ? '#FFE7AB' : '#2B3A61',
+            fontWeight: '400',
+            fontSize: 20
+          },
+          headerLeft: () => (
             <Pressable>
                 <MaterialCommunityIcons 
                 name={'chevron-left'} 
                 color={colorMode == 'light' ? '#2B3A61' : '#FFE7AB'} 
                 size={30}
                 style={{marginRight: 20}}
-                onPress={ () => {navigation.navigate('Planet');}}
+                onPress={ () => {navigation.navigate('PlanetDetail');}}
             />
             </Pressable>
-            )
+            ),
+          headerRight:() =>(
+            <TouchableOpacity onPress={() => toggleFunction()}>
+              <Text>{toggle ? <MaterialCommunityIcons name={'star-outline'} color={colorMode == 'light' ? 'black' : '#FFE7AB'} size={25} />:
+                              <MaterialCommunityIcons name={'star'} color={'blue'} size={25} />}
+              </Text>
+            </TouchableOpacity>
+            )  
         })}
       />
     </Stack.Navigator>
