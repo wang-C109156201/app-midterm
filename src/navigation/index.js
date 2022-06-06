@@ -21,6 +21,7 @@ import ManualScreen from '../screens/ManualScreen';
 import ReviewScreen from '../screens/ReviewScreen';
 import PlanetDetailScreen from '../screens/PlanetDetailScreen';
 import PlanetImgScreen from '../screens/PlanetImgScreen';
+import PlanetImgfinalScreen from '../screens/PlanetImgfinalScreen';
 import DisplaySettingScreen from '../screens/DisplaySettingScreen';
 import MyTheme from '../Theme';
 
@@ -357,7 +358,7 @@ const PlanetStack = ({navigation}) => {
       />
       <Stack.Screen
         name="PlanetImg"
-        component={PlanetImgScreen}
+        component={PlanetImgfinalScreen}
         options={() => ({
           title: "PlanetImg",
           headerStyle: {
