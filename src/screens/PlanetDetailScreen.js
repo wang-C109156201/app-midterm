@@ -198,17 +198,18 @@ const styles = StyleSheet.create({
     TextStyle:{
         fontSize: 18,
         marginLeft:30, 
+        marginTop:7,
     },
     imageleftStyle: {
-       height: 197,
-       width:180,
+       height: 182,
+       width:190,
        borderRadius:15,
-       marginLeft:20,
+       marginLeft:15,
        marginTop:20,
     },
     imagerightStyle: {
-        height: 197,
-        width:180,
+        height: 182,
+        width:190,
         borderRadius:15,
         marginLeft:20,
         marginTop:20,

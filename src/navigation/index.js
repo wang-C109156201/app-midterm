@@ -16,6 +16,10 @@ import DetailScreen from '../screens/DetailScreen';
 import SettingScreen from '../screens/SettingScreen';
 import UploadScreen from '../screens/UploadScreen';
 import PlanetScreen from '../screens/PlanetScreen';
+import PlanetChineseScreen from '../screens/PlanetChineseScreen';
+import PlanetMathScreen from '../screens/PlanetMathScreen';
+import PlanetScienceScreen from '../screens/PlanetScienceScreen';
+import PlanetSocietyScreen from '../screens/PlanetSocietyScreen';
 import SignupScreen from '../screens/SignupScreen';
 import ManualScreen from '../screens/ManualScreen';
 import ReviewScreen from '../screens/ReviewScreen';
@@ -128,7 +132,7 @@ const MyDrawer = () => {
       />
       <Drawer.Screen 
         name="Review" 
-        component={ReviewScreen} 
+        component={ReviewStack} 
         options={{
           headerShown: false,
           title: "待複習星知",
@@ -202,6 +206,43 @@ const MyTabs = () => {
         }}
       />
     </Tab.Navigator>
+  );
+}
+
+const ReviewStack = ({navigation}) => {
+  const { colorMode } = useColorMode();
+
+  return (
+    <Stack.Navigator>
+      <Stack.Screen
+        name="DisplayReview"
+        component={ReviewScreen}
+        options={{
+          title: "Review",
+          headerStyle: {
+            backgroundColor: colorMode == 'light' ? '#FFE7AB' : '#2B3A61',
+          },
+          headerTintColor: colorMode == 'light' ? '#2B3A61' : '#FFE7AB',
+          
+          headerTitleStyle: {
+            color: colorMode == 'light' ? '#FFE7AB' : '#2B3A61',
+            fontWeight: '400',
+            fontSize: 20
+          },
+          headerLeft: () => (
+            <MaterialCommunityIcons 
+              name={'menu'} 
+              size={30} 
+              color= {colorMode == 'light' ? '#2B3A61' : '#FFE7AB'}
+              onPress={() => navigation.openDrawer()}
+              style={{marginRight: 20}}
+            />            
+          ),  
+        }}
+      />
+      
+    </Stack.Navigator>
+    
   );
 }
 
@@ -357,6 +398,174 @@ const PlanetStack = ({navigation}) => {
         })}
       />
       <Stack.Screen
+        name="PlanetChinese"
+        component={PlanetChineseScreen}
+        options={() => ({
+          title: "PlanetChinese",
+          headerStyle: {
+            backgroundColor: '#fff',
+          },
+          headerTintColor: colorMode == 'light' ? '#FFE7AB' : '#2B3A61',
+          headerStyle: {
+            backgroundColor: colorMode == 'light' ? '#FFE7AB' : '#2B3A61',
+          },
+          headerTitleStyle: {
+            color: colorMode == 'light' ? '#FFE7AB' : '#2B3A61',
+            fontWeight: '400',
+            fontSize: 20
+          },
+          headerLeft: () => (
+            <MaterialCommunityIcons 
+              name={'menu'} 
+              size={30} 
+              color= {colorMode == 'light' ? '#2B3A61' : '#FFE7AB'}
+              onPress={() => navigation.openDrawer()}
+              style={{marginRight: 20}}
+            />            
+          ),
+          headerRight: () => (
+            <Ionicons 
+              name={'search'} 
+              size={30} 
+              color= {colorMode == 'light' ? '#2B3A61' : '#FFE7AB'}
+              onPress={() => {alert("you clicked me")}}
+              style={{marginRight: 20}}
+            />            
+          ),  
+          headerTitleStyle: {
+            color: colorMode == 'light' ? '#FFE7AB' : '#2B3A61',
+            fontWeight: '400',
+            fontSize: 20
+          },
+        })}
+      />
+      <Stack.Screen
+        name="PlanetMath"
+        component={PlanetMathScreen}
+        options={() => ({
+          title: "PlanetMath",
+          headerStyle: {
+            backgroundColor: '#fff',
+          },
+          headerTintColor: colorMode == 'light' ? '#FFE7AB' : '#2B3A61',
+          headerStyle: {
+            backgroundColor: colorMode == 'light' ? '#FFE7AB' : '#2B3A61',
+          },
+          headerTitleStyle: {
+            color: colorMode == 'light' ? '#FFE7AB' : '#2B3A61',
+            fontWeight: '400',
+            fontSize: 20
+          },
+          headerLeft: () => (
+            <MaterialCommunityIcons 
+              name={'menu'} 
+              size={30} 
+              color= {colorMode == 'light' ? '#2B3A61' : '#FFE7AB'}
+              onPress={() => navigation.openDrawer()}
+              style={{marginRight: 20}}
+            />            
+          ),
+          headerRight: () => (
+            <Ionicons 
+              name={'search'} 
+              size={30} 
+              color= {colorMode == 'light' ? '#2B3A61' : '#FFE7AB'}
+              onPress={() => {alert("you clicked me")}}
+              style={{marginRight: 20}}
+            />            
+          ),  
+          headerTitleStyle: {
+            color: colorMode == 'light' ? '#FFE7AB' : '#2B3A61',
+            fontWeight: '400',
+            fontSize: 20
+          },
+        })}
+      />
+      <Stack.Screen
+        name="PlanetSociety"
+        component={PlanetSocietyScreen}
+        options={() => ({
+          title: "PlanetSociety",
+          headerStyle: {
+            backgroundColor: '#fff',
+          },
+          headerTintColor: colorMode == 'light' ? '#FFE7AB' : '#2B3A61',
+          headerStyle: {
+            backgroundColor: colorMode == 'light' ? '#FFE7AB' : '#2B3A61',
+          },
+          headerTitleStyle: {
+            color: colorMode == 'light' ? '#FFE7AB' : '#2B3A61',
+            fontWeight: '400',
+            fontSize: 20
+          },
+          headerLeft: () => (
+            <MaterialCommunityIcons 
+              name={'menu'} 
+              size={30} 
+              color= {colorMode == 'light' ? '#2B3A61' : '#FFE7AB'}
+              onPress={() => navigation.openDrawer()}
+              style={{marginRight: 20}}
+            />            
+          ),
+          headerRight: () => (
+            <Ionicons 
+              name={'search'} 
+              size={30} 
+              color= {colorMode == 'light' ? '#2B3A61' : '#FFE7AB'}
+              onPress={() => {alert("you clicked me")}}
+              style={{marginRight: 20}}
+            />            
+          ),  
+          headerTitleStyle: {
+            color: colorMode == 'light' ? '#FFE7AB' : '#2B3A61',
+            fontWeight: '400',
+            fontSize: 20
+          },
+        })}
+      />
+      <Stack.Screen
+        name="PlanetScience"
+        component={PlanetScienceScreen}
+        options={() => ({
+          title: "PlanetScience",
+          headerStyle: {
+            backgroundColor: '#fff',
+          },
+          headerTintColor: colorMode == 'light' ? '#FFE7AB' : '#2B3A61',
+          headerStyle: {
+            backgroundColor: colorMode == 'light' ? '#FFE7AB' : '#2B3A61',
+          },
+          headerTitleStyle: {
+            color: colorMode == 'light' ? '#FFE7AB' : '#2B3A61',
+            fontWeight: '400',
+            fontSize: 20
+          },
+          headerLeft: () => (
+            <MaterialCommunityIcons 
+              name={'menu'} 
+              size={30} 
+              color= {colorMode == 'light' ? '#2B3A61' : '#FFE7AB'}
+              onPress={() => navigation.openDrawer()}
+              style={{marginRight: 20}}
+            />            
+          ),
+          headerRight: () => (
+            <Ionicons 
+              name={'search'} 
+              size={30} 
+              color= {colorMode == 'light' ? '#2B3A61' : '#FFE7AB'}
+              onPress={() => {alert("you clicked me")}}
+              style={{marginRight: 20}}
+            />            
+          ),  
+          headerTitleStyle: {
+            color: colorMode == 'light' ? '#FFE7AB' : '#2B3A61',
+            fontWeight: '400',
+            fontSize: 20
+          },
+        })}
+      />
+      <Stack.Screen
         name="PlanetImg"
         component={PlanetImgfinalScreen}
         options={() => ({
@@ -386,8 +595,8 @@ const PlanetStack = ({navigation}) => {
             ),
           headerRight:() =>(
             <TouchableOpacity onPress={() => toggleFunction()}>
-              <Text>{toggle ? <MaterialCommunityIcons name={'star-outline'} color={colorMode == 'light' ? 'black' : '#FFE7AB'} size={25} />:
-                              <MaterialCommunityIcons name={'star'} color={'blue'} size={25} />}
+              <Text>{toggle ? <MaterialCommunityIcons name={'star-outline'} color={colorMode == 'light' ? '#2B3A61' : '#FFE7AB'} size={25} />:
+                              <MaterialCommunityIcons name={'star'} color={colorMode == 'light' ? '#2B3A61' : '#FFE7AB'} size={25} />}
               </Text>
             </TouchableOpacity>
             )  

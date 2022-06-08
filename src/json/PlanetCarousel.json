@@ -3,18 +3,22 @@
     "data":[
         {
             "title":"三民英文(二)L8單字",
+            "id":"1",
             "image": "https://raw.githubusercontent.com/wang-C109156201/app-midterm/master/src/images/3.png"
         },
         {
             "title":"三民英文(二)L8單字",
+            "id":"2",
             "image": "https://raw.githubusercontent.com/wang-C109156201/app-midterm/master/src/images/4.png"
         },
         {
             "title":"三民英文(二)L8單字",
+            "id":"3",
             "image": "https://raw.githubusercontent.com/wang-C109156201/app-midterm/master/src/images/5.png"
         },
         {
             "title":"三民英文(二)L8單字",
+            "id":"4",
             "image": "https://raw.githubusercontent.com/wang-C109156201/app-midterm/master/src/images/article.png"
         }
     ]

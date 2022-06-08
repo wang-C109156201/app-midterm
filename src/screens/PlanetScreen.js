@@ -23,43 +23,47 @@ const Planet = ({ navigation }) => {
         >
        
         <Box style={styles.rowStyle}  >
-            <TouchableOpacity onPress={() => navigation. navigate ( 'PlanetDetail' )}>
+            <TouchableOpacity onPress={() => navigation. navigate ( 'PlanetChinese' )}>
                 <Image
                     source={{ uri: "https://raw.githubusercontent.com/wang-C109156201/app-midterm/master/src/images/%E5%9C%8B%E6%96%87.png" }}
                     style={styles.imageleftStyle}
                     alt="chinese"
                 />
             </TouchableOpacity>
-            
+            <TouchableOpacity onPress={() => navigation. navigate ( 'PlanetDetail' )}>
                 <Image
                     source={{ uri: "https://raw.githubusercontent.com/wang-C109156201/app-midterm/master/src/images/%E8%8B%B1%E6%96%87.png" }}
                     style={styles.imagerightStyle}
                     alt="english"
                 />
-            
+            </TouchableOpacity>
         </Box>
         <Box style={styles.rowStyle} >
-            <Image
-                source={{ uri: "https://raw.githubusercontent.com/wang-C109156201/app-midterm/master/src/images/math.png" }}
-                style={styles.imageleftStyle}
-                alt="math"
+            <TouchableOpacity onPress={() => navigation. navigate ( 'PlanetMath' )}>
+                <Image
+                    source={{ uri: "https://raw.githubusercontent.com/wang-C109156201/app-midterm/master/src/images/math.png" }}
+                    style={styles.imageleftStyle}
+                    alt="math"
 
-            />
-           
+                />
+            </TouchableOpacity>
+            <TouchableOpacity onPress={() => navigation. navigate ( 'PlanetScience' )}>
                 <Image
                     source={{ uri: "https://raw.githubusercontent.com/wang-C109156201/app-midterm/master/src/images/%E8%87%AA%E7%84%B6.png" }}
                     style={styles.imagerightStyle}
                     alt="physical"
                 />
-            
+            </TouchableOpacity>
         </Box>
     </Center>    
         <Box  >
-            <Image
-                source={{ uri: "https://raw.githubusercontent.com/wang-C109156201/app-midterm/master/src/images/%E7%A4%BE%E6%9C%83.png" }}
-                style={styles.imageleftoneStyle}
-                alt="social"
-            />
+            <TouchableOpacity onPress={() => navigation. navigate ( 'PlanetSociety' )}>
+                <Image
+                    source={{ uri: "https://raw.githubusercontent.com/wang-C109156201/app-midterm/master/src/images/%E7%A4%BE%E6%9C%83.png" }}
+                    style={styles.imageleftoneStyle}
+                    alt="social"
+                />
+            </TouchableOpacity>
         </Box> 
     
         <Image

@@ -1,32 +1,29 @@
-import { Image, Pressable, useColorMode,Text, Box, Center } from "native-base";
+import {  Pressable, useColorMode,View } from "native-base";
 import React, { useState } from 'react';
-import { useWindowDimensions ,StyleSheet,View} from "react-native"
+import { useWindowDimensions ,StyleSheet, Text, Dimensions, Image} from "react-native";
 import Carousel , { Pagination } from "react-native-snap-carousel";
 import { Component } from "react/cjs/react.production.min";
 import PlanetCarousel from "../json/PlanetCarousel.json";
-import CarouselCardItem, { SLIDER_WIDTH, ITEM_WIDTH } from './CarouselCardItem'
 
+export const SLIDER_WIDTH = Dimensions.get('window').width + 80
+export const ITEM_WIDTH = Math.round(SLIDER_WIDTH * 0.7)
 const PlanetImg = ({item}) => {
     const layout = useWindowDimensions();
     const { colorMode } = useColorMode();
     const [index, setIndex] = React.useState(0);
-    const isCarousel = React.useRef(null)
-    const renderItem = ({item }) => {
-        return(
-            <View
-               backgroundColor={colorMode == "light" ? "#FFE7AB" : "#2B3A61"}  >
-                <Text style={styles.TextStyle}  color={colorMode == "light" ? "#2B3A61" : "#FFE7AB"} >{item.title}</Text>   
-                <Image 
-                    borderRadius={5}
-                    w={550} h={587}
-                    source={{uri:item.image }}
-                    alt="CarouselImg"
-                />
-                
-            </View>
-           
+    const isCarousel = React.useRef(null);
 
-        );
+    const CarouselCardItem = ({ item, index }) => {
+    return (
+        <View style={styles.container} key={index}>
+        {/* <Text style={styles.TextStyle}>{item.title}</Text> */}
+            <Image
+                source={{ uri: item.image }}
+                style={styles.image}
+            />
+        
+        </View>
+    )
     }
     return (
         <View backgroundColor={colorMode == "light" ? "#FFE7AB" : "#2B3A61"} >
@@ -59,7 +56,32 @@ const PlanetImg = ({item}) => {
         </View>
     );
 }
-
+const styles = StyleSheet.create({
+    container: {
+      borderRadius: 5,
+      width: ITEM_WIDTH,
+      paddingBottom: 50,
+      shadowColor: "gray",
+      shadowOffset: {
+        width: 0,
+        height: 1,
+      },
+      shadowOpacity: 0.29,
+      shadowRadius: 4.65,
+      elevation: 7,
+      // marginLeft:10,
+      alignItems: 'center',
+      justifyContent: 'center',
+    },
+    image: {
+      width: 410,
+      height: 600,
+      marginTop:20,
+    },
+    TextStyle: {
+      fontSize:25,
+    }
+  })
 
 
 export default PlanetImg;
