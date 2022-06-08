@@ -173,7 +173,7 @@ const PlanetDetail = ({ navigation }) => {
       <Box flex={1}
          _dark={{ bg: "#2B3A61" }}
          _light={{ bg: "#FFE7AB" }}>
-
+         {/* <Text style={styles.Text2Style} bold  color={colorMode == "light" ? "#2B3A61" : "#FFE7AB"}>英文星</Text>  */}
          <SegmentedControlTab
             values={["單字", "片語"]}
             tabStyle={{ 
@@ -199,6 +199,11 @@ const styles = StyleSheet.create({
         fontSize: 18,
         marginLeft:30, 
         marginTop:7,
+    },
+    Text2Style:{
+        fontSize: 20,
+        marginLeft:10, 
+        marginTop:10,
     },
     imageleftStyle: {
        height: 182,

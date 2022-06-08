@@ -1,25 +1,26 @@
 import React from 'react';
-import { Provider } from 'react-redux';
-import Screen  from '../redux/screens/EditFavoritesScreen';
-import store from '../redux/store';
-import { Text, StyleSheet, FlatList, View, HStack, VStack, Pressable, AspectRatio, Image } from "react-native";
-import { useSelector, useDispatch } from "react-redux";
-import { useState } from "react";
-import ReviewDetail from "./ReviewDetailScreen";
+import { Text,StyleSheet } from "react-native";
+import { NativeBaseProvider, ScrollView, Box,useColorMode } from 'native-base';
 
-const Review = ({ navigation }) => {
-    const Review = useSelector((state) => state.reviewnote.Review);
-    const renderItem = ({ item }) => <ReviewDetail popularBike={item} navigation={navigation} />;
+
+const Review = () => {
+    const { colorMode, toggleColorMode} = useColorMode();
     return (
-        <Provider store={store}>
-            <FlatList
-            data={Review}
-            renderItem={renderItem}
-            keyExtractor={item => item.id}
-            />
-        </Provider>
-        
-    );
+        <ScrollView  flex={1}
+            _dark={{ bg: "#2B3A61" }}
+            _light={{ bg: "#FFE7AB" }}>
+            <Text style={styles.textStyle} bold  color={colorMode == "light"? "#2B3A61" :"#FFE7AB"}>待複習星知</Text> 
+        </ScrollView>
+        );
 }
-
+const styles = StyleSheet.create({ 
+    textStyle: {
+       marginTop:22,
+       marginBottom:10,
+       fontSize:27,
+       marginLeft:30,
+       lineHeight:40,
+       fontWeight:"700",
+    },
+  });
 export default Review;
