@@ -1,6 +1,6 @@
 import React from 'react';
 import { Text,StyleSheet } from "react-native";
-import { NativeBaseProvider, ScrollView, Box,useColorMode } from 'native-base';
+import { NativeBaseProvider, ScrollView, Box,useColorMode, Image } from 'native-base';
 
 
 const Review = () => {
@@ -10,6 +10,18 @@ const Review = () => {
             _dark={{ bg: "#2B3A61" }}
             _light={{ bg: "#FFE7AB" }}>
             <Text style={styles.textStyle} bold  color={colorMode == "light"? "#2B3A61" :"#FFE7AB"}>待複習星知</Text> 
+            <Image
+                source={{ uri: item.image }}
+                style={styles.image}
+            />
+            <Image
+                source={{ uri: item.image }}
+                style={styles.image}
+            />
+            <Image
+                source={{ uri: item.image }}
+                style={styles.image}
+            />
         </ScrollView>
         );
 }
