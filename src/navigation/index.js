@@ -108,7 +108,7 @@ const MyDrawer = () => {
         >
           
       <Drawer.Screen 
-        name="HomeStack" 
+        name="HomePage" 
         component={MyTabs} 
         
         options={{
@@ -163,7 +163,7 @@ const MyTabs = () => {
 
   return (
     <Tab.Navigator
-      initialRouteName="HomeStack"
+      initialRouteName="Home"
       screenOptions={{
         tabBarInactiveTintColor: colorMode == 'light' ? '#FFFFFF' : '#2B3A61',
         tabBarActiveTintColor: colorMode == 'light' ? '#FFE7AB' : '#2B3A61',

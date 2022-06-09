@@ -1,5 +1,5 @@
 import React from 'react';
-import {StyleSheet, Linking } from 'react-native';
+import {StyleSheet, Linking,TouchableOpacity } from 'react-native';
 import { Center, ScrollView, Box, AspectRatio, Text, Heading, Image, Button,Link } from "native-base";
 
 
@@ -21,29 +21,25 @@ const DetailScreen = ({ route }) => {
     >
       <ScrollView _dark={{ bg: "#2B3A61" }}
       _light={{ bg: "#FFE7AB" }}>
-        
-        <Link mt={4} href={url}>
-        <AspectRatio style={styles.imageboxStyle} _dark={{ bg: "#2B3A61" }}
-         _light={{ bg: "#FFE7AB" }}>
-          <Image
-            source={{uri: image }}
-            alt='albumImage'
-            marginRight={10}
-            marginLeft={4}
-            borderRadius={10}
-            width={400}
-            height={250}
-          />
-        </AspectRatio>
-        </Link>
+         <TouchableOpacity onPress={() => Linking.openURL(url)}>
+         <Image
+              source={{uri: image }}
+              alt='albumImage'
+              marginRight={10}
+              marginLeft={4}
+              borderRadius={10}
+              width={400}
+              height={250}
+            />
+          </TouchableOpacity>
         <Box shadow={1} _dark={{ bg: "#2B3A61", borderColor: 'blueGray.500', borderWidth: 0.6 }}
         _light={{ bg: "white" }} style={styles.Boxstyle} >
-          <Text fontSize="xl" mt='15' ml='17' mr='17'bold color={'black'} >{'\t'}一、上課專心聽課，先理解再作筆記</Text>
-          <Text fontSize="md" mt='15' ml='17' mr='17' color={'black'}>{'\t'}{description}</Text>
-          <Text fontSize="xl" mt='15' ml='17' mr='17'bold color={'black'} >二、營造好的讀書環境</Text>
-          <Text fontSize="md" mt='15' ml='17' mr='17' color={'black'}>{descriptiontwo}</Text>
-          <Text fontSize="xl" mt='15' ml='17' mr='17'bold color={'black'} >三、休息是為了走更長遠的路</Text>
-          <Text fontSize="md" mt='15' ml='17' mr='17' mb={10} color={'black'}>{'\t'}{descriptionthree}</Text>
+          <Text fontSize="xl" mt='15' ml='15' mr='17'bold color={'black'} >{'\t'}一、上課專心聽課，先理解再作筆記</Text>
+          <Text fontSize="md" mt='15' ml='15' mr='17' color={'black'}>{'\t'}{description}</Text>
+          <Text fontSize="xl" mt='15' ml='15' mr='17'bold color={'black'} >二、營造好的讀書環境</Text>
+          <Text fontSize="md" mt='15' ml='15' mr='17' color={'black'}>{descriptiontwo}</Text>
+          <Text fontSize="xl" mt='15' ml='15' mr='17'bold color={'black'} >三、休息是為了走更長遠的路</Text>
+          <Text fontSize="md" mt='15' ml='15' mr='17' mb={10} color={'black'}>{'\t'}{descriptionthree}</Text>
         </Box>
       </ScrollView>      
     </Center>
@@ -69,7 +65,7 @@ const styles = StyleSheet.create({
     justifyContent:"center",
     alignItems: 'center',
     marginTop:10,
-    marginBottom:0,
+    marginBottom:10,
     height: 370,
     width:370,
   },
@@ -77,7 +73,8 @@ const styles = StyleSheet.create({
     backgroundColor:"white",
     borderRadius:25,
     marginLeft:10,
-    marginRight:10,
+    marginRight:31,
+    marginTop:20,
     marginBottom:10
   },
 });

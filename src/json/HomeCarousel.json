@@ -1,0 +1,28 @@
+{
+    "Hometitle":"首頁圖片輪播",
+    "data":[
+        {
+            "title":"首頁圖片輪播",
+            "id":"1",
+            "image": "https://raw.githubusercontent.com/wang-C109156201/app-midterm/master/src/images/Rectangle%201.png"
+        },
+        {
+            "title":"首頁圖片輪播",
+            "id":"2",
+            "image": "https://raw.githubusercontent.com/wang-C109156201/app-midterm/master/src/images/KohzGNg.jpg"
+        },
+        {
+            "title":"首頁圖片輪播",
+            "id":"3",
+            "image": "https://raw.githubusercontent.com/wang-C109156201/app-midterm/master/src/images/%E8%AE%80%E6%9B%B8%E6%95%88%E7%8E%87-02-2021-08-05.png"
+        },
+        {
+            "title":"首頁圖片輪播",
+            "id":"4",
+            "image": "https://raw.githubusercontent.com/wang-C109156201/app-midterm/master/src/images/6488817647640f8219ca.jpg"
+        }
+    ]
+    
+}
+
+    
